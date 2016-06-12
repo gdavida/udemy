@@ -8,17 +8,33 @@
 </head>
 <body>
 <div class="container-fluid">
-	<ul class="nav nav-tabs nav-justified navbar-static-top">
-		<li role="presentation"><%= link_to "Home", root_path %></li>
-		<li role="presentation"><%= link_to "About Us", welcome_about_path %></li>
-		<li role="presentation"><%= link_to "Contact", welcome_contact_path %></li>
-		<li role="presentation"><%= link_to "Features", welcome_features_path %></li>
-		<li role="presentation"><%= link_to "FAQs", welcome_faq_path %></li>
-		<li role="presentation"><%= link_to "Pricing", welcome_pricing_path %></li>
-		<li role="presentation"><%= link_to "Invoices", invoices_path %></li>
-		<li role="presentation"><%= link_to "Login", root_path %></li>
-	</ul>
-<div class="container">
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav nav-tabs nav-justified navbar-static-top">
+					<li role="presentation"><%= link_to "Home", root_path %></li>
+					<li role="presentation"><%= link_to "About Us", welcome_about_path %></li>
+					<li role="presentation"><%= link_to "Contact", welcome_contact_path %></li>
+					<li role="presentation"><%= link_to "Features", welcome_features_path %></li>
+					<li role="presentation"><%= link_to "FAQs", welcome_faq_path %></li>
+					<li role="presentation"><%= link_to "Pricing", welcome_pricing_path %></li>
+					<li role="presentation"><%= link_to "Invoices", invoices_path %></li>
+					<li role="presentation"><%= link_to "Login", root_path %></li>
+				</ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+<div class="container main-contents">
 	<%= yield %>
 </div>
 
